@@ -1,11 +1,11 @@
 <div>
-  <img height="300" width="300" src="file:///C:/Projeto-individual/SITE%20EST%C3%81TICO/IMG/LOGO2.png" align="right">
-  <h1>📘 | Fluxo Health</h1>
+  <img height="100" width="100" src="https://cdn.discordapp.com/attachments/1075937451748638780/1105137908031168622/LOGO2.png" align="right">
+  <h1> 👟 | SNKRS - O mundo em seus pés</h1>
   <p> 
     Nós da SNKRS somos um grupo de sneackers-head, formado em 2023 com a intenção de te ajudar a entender mais sobre o mercado dos tênis! Te atualizando sobre             tendencias, assuntos do momento e também te ajudando a se integrar nesse mercado!
   </p>
   
-  - <a href="https://fluxo-health.vercel.app/Inicio.html" target="_blank"><p>Visite o site clicando aqui</p></a>
+  - <a href="" target="_blank"><p>Visite o site clicando aqui</p></a>
 </div>
 
 <br><br>

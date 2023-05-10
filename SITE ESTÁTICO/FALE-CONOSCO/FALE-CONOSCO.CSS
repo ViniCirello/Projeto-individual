@@ -87,12 +87,12 @@
         transition: all 0.5s ease-out;
     }
 
-    .link:hover > .underline {
+    .link:hover>.underline {
 
         width: 80%;
         background-color: green;
         border-radius: 15px;
-        
+
     }
 
     .link {
@@ -100,7 +100,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        
+
     }
 
     /* fim do header */
@@ -115,7 +115,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color:rgba(0, 0, 0, 0.495);
+        background-color: rgba(0, 0, 0, 0.495);
         margin-top: -55px;
     }
 
@@ -135,22 +135,23 @@
         background-color: green;
         border-radius: 5px;
         animation: animation 3s linear alternate;
-      }
-      
-      @keyframes animation {
+    }
+
+    @keyframes animation {
         from {
-          width: 0%;
+            width: 0%;
         }
+
         to {
-          width: 35%;
+            width: 35%;
         }
-      }
+    }
 
     .div_Titulo span {
         color: white;
         font-size: 65px;
         font-family: Inter;
-        font-weight:bolder;
+        font-weight: bolder;
     }
 
 
@@ -164,7 +165,7 @@
         justify-content: space-around;
     }
 
-    .div_Input1 input{
+    .div_Input1 input {
         width: 450px;
         height: 35px;
         border-radius: 25px;
@@ -173,7 +174,7 @@
     }
 
 
-    .div_Input2-3 input{
+    .div_Input2-3 input {
         width: 225px;
         height: 35px;
         border-radius: 25px;
@@ -181,7 +182,7 @@
         text-indent: 10px;
     }
 
-    .div_Input4 input{
+    .div_Input4 input {
         width: 450px;
         height: 170px;
         border-radius: 20px;
@@ -193,7 +194,7 @@
     button {
         border-radius: 25px;
         border: none;
-        background-color:green;
+        background-color: green;
         color: white;
         width: 200px;
         height: 50px;
@@ -203,7 +204,7 @@
         transition: transform 0.3s ease-in-out;
     }
 
-    button:hover{
+    button:hover {
         transform: scale(1.1);
     }
 

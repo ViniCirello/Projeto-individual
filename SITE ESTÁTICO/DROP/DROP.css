@@ -1,0 +1,341 @@
+body {
+    margin: 0;
+}
+
+.div_Fundo {
+    background-image: url(../IMG/Fundo\ -\ DROP.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.opacidade {
+    background-color: rgba(0, 0, 0, 0.694);
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* scroll */
+
+/* Personaliza a largura do scroll */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Personaliza a cor de fundo da track
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+} */
+
+/* Personaliza a cor da thumb */
+::-webkit-scrollbar-thumb {
+    background-color: green;
+
+}
+
+/* Personaliza a cor da thumb quando hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: green;
+}
+
+/* fim scroll */
+
+/* começo do header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+header span {
+    color: white;
+    font-family: Inter;
+
+}
+
+
+header img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.2);
+}
+
+
+
+.div_headerIMG {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.div_links {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 50px;
+
+}
+
+.underline {
+    width: 0px;
+    height: 3px;
+    transition: all 0.5s ease-out;
+}
+
+.link:hover>.underline {
+
+    width: 80%;
+    background-color: green;
+    border-radius: 15px;
+
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/* fim do header */
+
+
+
+
+.div_Titulo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+
+.underline-pagChamado {
+    width: 12%;
+    height: 10px;
+    background-color: green;
+    border-radius: 5px;
+    animation: animation 3s linear alternate;
+}
+
+@keyframes animation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 12%;
+    }
+}
+
+.div_Titulo span {
+    color: white;
+    font-size: 65px;
+    font-family: Inter;
+    font-weight: bolder;
+}
+
+.div_Pagina_Inicial {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div_spanPag_inicial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 200px;
+    justify-content: space-between;
+}
+
+.Texto {
+    color: white;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+
+.Div_InfAdd {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.LOGO {
+    color: white;
+    font-family: Sedgwick Ave Display;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.LOGO_descricao {
+    color: white;
+    font-family: Sedgwick Ave Display;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+/* Começo da página NIKE */
+
+.Página_NIKE {
+    width: 100%;
+    height: 250vh;
+}
+
+
+
+.LOGO-NIKE {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+
+
+.LOGO-NIKE img {
+    width: 250px;
+    height: 100px;
+}
+
+.div_primeiraFileira  {
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.div_primeiraFileira span {
+    margin-top: -75px;
+    margin-left: -15px;
+    font-family: Inter;
+    font-size: 17px;
+}
+
+.Tenis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div_seta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tenis {
+    width: 400px;
+    height: 400px;
+}
+
+
+
+
+.setaE {
+    width: 15px;
+    height: 15px;
+    transform: rotate(180deg);
+}
+
+.setaD {
+    width: 15px;
+    height: 15px;
+}
+
+
+
+/* começo do footer  */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    position: relative;
+    background-color: black;
+}
+
+.div_nome_footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+
+.div_botao_topo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+.div_redes-sociais {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-around;
+    margin-right: 50px;
+}
+
+.div_redes-sociais img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.div_redes-sociais img:hover {
+    transform: scale(1.1);
+}
+
+.div_botao_topo img {
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.div_botao_topo img:hover {
+    transform: scale(1.2);
+}
+
+footer span {
+    font-size: 25px;
+    color: white;
+    font-family: Sedgwick Ave Display;
+}

@@ -225,11 +225,11 @@ header img:hover {
 
 
 .LOGO-NIKE img {
-    width: 250px;
-    height: 100px;
+    width: 350px;
+    height: 150px;
 }
 
-.div_primeiraFileira  {
+.div_primeiraFileira {
     margin-top: -50px;
     display: flex;
     justify-content: center;
@@ -262,9 +262,6 @@ header img:hover {
     height: 400px;
 }
 
-
-
-
 .setaE {
     width: 15px;
     height: 15px;
@@ -276,6 +273,87 @@ header img:hover {
     height: 15px;
 }
 
+/* Começo do infografico */
+
+.Grafico_NIKE {
+    padding-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Grafico_NIKE span {
+    font-family: Inter;
+    font-size: 20px;
+}
+
+.div_Titulo_NIKE {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_Titulo_NIKE span {
+    font-family: Inter;
+    font-size: 45px;
+}
+
+
+.underlineNIKE {
+    margin-top: 10px;
+    width: 25%;
+    height: 10px;
+    background-color: green;
+    border-radius: 5px;
+    animation: animation2 3s linear alternate;
+}
+
+@keyframes animation2 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 25%;
+    }
+}
+
+
+.chartJS {
+    width: 750px;
+    height: 450px;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+
+}
+
+
+/* Começo da Página da Adidas  */
+.Pagina_Adidas {
+    width: 100%;
+    height: 250vh;
+    background-color: #f3f4f5;
+    margin-top: -5px;
+}
+
+.LOGO-Adidas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+.LOGO-Adidas img {
+    width: 250px;
+    height: 250px;
+}
 
 
 /* começo do footer  */

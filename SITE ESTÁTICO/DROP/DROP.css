@@ -306,7 +306,7 @@ header img:hover {
 
 .underlineNIKE {
     margin-top: 10px;
-    width: 25%;
+    width: 18%;
     height: 10px;
     background-color: green;
     border-radius: 5px;
@@ -319,7 +319,7 @@ header img:hover {
     }
 
     to {
-        width: 25%;
+        width: 18%;
     }
 }
 
@@ -337,7 +337,7 @@ header img:hover {
 /* Começo da Página da Adidas  */
 .Pagina_Adidas {
     width: 100%;
-    height: 250vh;
+    height: 270vh;
     background-color: #f3f4f5;
     margin-top: -5px;
 }
@@ -355,6 +355,121 @@ header img:hover {
     height: 250px;
 }
 
+.underlineAdidas {
+    margin-top: 10px;
+    width: 20%;
+    height: 10px;
+    background-color: green;
+    border-radius: 5px;
+    animation: animation3 3s linear alternate;
+}
+
+@keyframes animation3 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 20%;
+    }
+}
+
+/* FIM DA PÁGINA DA ADIDAS */
+
+.SVG_adidas {
+    transform: rotate(180deg);
+}
+
+/* Começo página da New Balance */
+
+.Pagina_NewBalance {
+    width: 100%;
+    height: 250vh;
+}
+
+.LOGO-Adidas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+.LOGO-Adidas img {
+    width: 250px;
+    height: 250px;
+}
+
+.underlineNEW {
+    margin-top: 10px;
+    width: 35%;
+    height: 10px;
+    background-color: green;
+    border-radius: 5px;
+    animation: animation4 3s linear alternate;
+}
+
+@keyframes animation4 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 35%;
+    }
+}
+
+/* FIM DA PÁGINA DA New Balance */
+
+/* Começo tela Multi marcas */
+
+.Pagina_Multi {
+    width: 100%;
+    height: 180vh;
+    background-color: #f3f4f5;
+    margin-top: -5px;
+}
+
+.LOGOS {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    justify-content: space-around;
+}
+
+.LOGOS img {
+    width: 125px;
+    height: 125px;
+}
+
+
+.Div_InfAdd-Multi {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Quinzenalmente {
+    font-family: Inter;
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.LOGO-Multi{
+    color: black;
+    font-family: Sedgwick Ave Display;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+/* Fim da tela Multi marcas */
 
 /* começo do footer  */
 

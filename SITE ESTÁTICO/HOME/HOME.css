@@ -104,12 +104,12 @@ header img:hover {
     transition: all 0.5s ease-out;
 }
 
-.link:hover > .underline {
+.link:hover>.underline {
 
     width: 80%;
     background-color: green;
     border-radius: 15px;
-    
+
 }
 
 .link {
@@ -117,7 +117,7 @@ header img:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+
 }
 
 /* fim do header */
@@ -149,13 +149,14 @@ header img:hover {
     font-size: 25px;
     position: relative;
     top: 20px;
-    
+
 }
 
 .elipse {
     width: 700px;
     height: 390px;
 }
+
 /* 
 Começo da estilização do tenis girando */
 
@@ -345,7 +346,7 @@ Começo da estilização do tenis girando */
     align-items: center;
     padding-top: 100px;
     padding-bottom: 15px;
-    
+
 }
 
 
@@ -373,7 +374,7 @@ Começo da estilização do tenis girando */
 }
 
 .div_mensagem {
-    width: 35%;
+    width: 40%;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -393,27 +394,105 @@ Começo da estilização do tenis girando */
     justify-content: flex-end;
     position: absolute;
     top: 900px;
-    
+
 }
 
 .img_dunkPAG2 img {
     width: 650px;
     height: 450px;
-    
+
 }
 
 
 /* Fim Página 2 */
 
-svg{
-    rotate: 180('deg');
+.svg1 {
     margin-bottom: -5px;
 }
 
-/* Começo da Página 3 */
+.svg2 {
+    transform: rotate(180deg);
+    margin-bottom: -10px;
+}
 
-.Página3 {
+.PagGame {
+    width: 100%;
+    height: 100vh;
     padding-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 150px;
+    background-color: white;
+    padding-bottom: 15px;
+}
+
+.InfoGames {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.TextosGame {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.div_tituloGames span {
+    font-size: 60px;
+    font-family: Inter;
+    font-weight: 700;
+}
+
+.underlinePagGame {
+    width: 20%;
+    height: 10px;
+    background-color: green;
+    border-radius: 5px;
+}
+
+.Desc {
+    font-size: 25px;
+    font-family: Inter;
+    font-weight: 700;
+}
+
+button {
+    border-radius: 25px;
+    border: none;
+    background-color: green;
+    color: white;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: 900;
+    font-family: Inter;
+    transition: transform 0.3s ease-in-out;
+    font-size: 20px ;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+img {
+    width: 300px;
+    height: 250px;
+}
+
+/* Começo da Página Novidades */
+
+.Página4 {
+    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -423,7 +502,7 @@ svg{
     padding-bottom: 15px;
 }
 
-.underlinePag3 {
+.underlinePag4 {
     width: 20%;
     height: 10px;
     background-color: green;
@@ -455,7 +534,7 @@ svg{
     transform: scale(1.1);
 }
 
-.div_Novidade img{
+.div_Novidade img {
     height: 350px;
     width: 350px;
     border-radius: 15px;
@@ -480,12 +559,10 @@ svg{
     font-family: Sedgwick Ave Display;
     font-size: 22px;
 }
-/* Fim da Página 3 */
+
+/* Fim da Página Novidades */
 
 /* começo do footer  */
-
-
-
 
 .footer {
     display: flex;
@@ -546,6 +623,3 @@ footer span {
     color: white;
     font-family: Sedgwick Ave Display;
 }
-
-
-

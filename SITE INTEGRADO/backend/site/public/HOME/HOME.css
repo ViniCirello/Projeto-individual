@@ -1,0 +1,635 @@
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* scroll */
+
+/* Personaliza a largura do scroll */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Personaliza a cor de fundo da track
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  } */
+
+/* Personaliza a cor da thumb */
+::-webkit-scrollbar-thumb {
+    background-color: green;
+
+}
+
+/* Personaliza a cor da thumb quando hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: green;
+}
+
+/* fim scroll */
+
+
+/* estilização fundo  */
+
+.opacidade {
+    background-color: rgba(0, 0, 0, 0.548);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+}
+
+.background-planta {
+    background-image: url(../IMG/fundo-de-folhas-verdes-tropicais.jpg);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+/* começo do header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+header span {
+    color: white;
+    font-family: Inter;
+
+}
+
+
+header img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.2);
+}
+
+
+
+.div_headerIMG {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.div_links {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 50px;
+
+}
+
+.underline {
+    width: 0px;
+    height: 3px;
+    transition: all 0.5s ease-out;
+}
+
+.link:hover>.underline {
+
+    width: 80%;
+    background-color: green;
+    border-radius: 15px;
+
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/* fim do header */
+
+
+/* Começo Página inicial  */
+
+.div_Informações {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.NOME {
+    color: rgb(255, 255, 255);
+    font-family: Sedgwick Ave Display;
+    font-size: 125px;
+    position: relative;
+    top: 50px;
+
+}
+
+.Subtitulo {
+    font-family: Sedgwick Ave Display;
+    color: white;
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+
+}
+
+.elipse {
+    width: 700px;
+    height: 390px;
+}
+
+/* 
+Começo da estilização do tenis girando */
+
+#imagem {
+    width: 500px;
+    height: 400px;
+    background-image: url(../IMG/img01-removebg.png);
+    background-size: cover;
+    position: absolute;
+    top: 200px;
+}
+
+
+@keyframes animacao {
+    0% {
+        background-image: url(../IMG/img01-removebg.png);
+    }
+
+    2.7778% {
+        background-image: url(../IMG/img01-removebg.png);
+    }
+
+    5.5556% {
+        background-image: url(../IMG/img02-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    8.3333% {
+        background-image: url(../IMG/img03-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    11.1111% {
+        background-image: url(../IMG/img04-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    13.8889% {
+        background-image: url(../IMG/img05-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    16.6667% {
+        background-image: url(../IMG/img06-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    19.4444% {
+        background-image: url(../IMG/img07-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    22.2222% {
+        background-image: url(../IMG/img08-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    25% {
+        background-image: url(../IMG/img09-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    27.7778% {
+        background-image: url(../IMG/img10-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    30.5556% {
+        background-image: url(../IMG/img11-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    33.3333% {
+        background-image: url(../IMG/img12-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    36.1111% {
+        background-image: url(../IMG/img13-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    38.8889% {
+        background-image: url(../IMG/img14-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    41.6667% {
+        background-image: url(../IMG/img15-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    44.4444% {
+        background-image: url(../IMG/img16-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    47.2222% {
+        background-image: url(../IMG/img17-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    50% {
+        background-image: url(../IMG/img18-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    52.7778% {
+        background-image: url(../IMG/img19-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    55.5556% {
+        background-image: url(../IMG/img20-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    58.3333% {
+        background-image: url(../IMG/img21-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    61.1111% {
+        background-image: url(../IMG/img22-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    63.8889% {
+        background-image: url(../IMG/img23-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    66.6667% {
+        background-image: url(../IMG/img24-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    69.4444% {
+        background-image: url(../IMG/img25-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    72.2222% {
+        background-image: url(../IMG/img26-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    75% {
+        background-image: url(../IMG/img27-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    77.7778% {
+        background-image: url(../IMG/img28-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    80.5556% {
+        background-image: url(../IMG/img29-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    83.3333% {
+        background-image: url(../IMG/img30-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    86.1111% {
+        background-image: url(../IMG/img31-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    88.8889% {
+        background-image: url(../IMG/img32-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    91.6667% {
+        background-image: url(../IMG/img33-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    94.4444% {
+        background-image: url(../IMG/img34-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    97.2222% {
+        background-image: url(../IMG/img35-PhotoRoom.png-PhotoRoom.png);
+    }
+
+    100% {
+        background-image: url(../IMG/img36-PhotoRoom.png-PhotoRoom.png);
+    }
+}
+
+
+
+#imagem {
+    /* propriedades adicionais */
+    animation: animacao 1.3s infinite;
+    transition: background-image 0s ease-out;
+}
+
+
+
+/* Fim da estilização do tenis em girando */
+
+
+/* Fim Página inicial */
+
+
+/* Começo da página 2 */
+
+
+.Página2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 15px;
+
+}
+
+
+.div_titulo {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.div_titulo span {
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.underlinePag2 {
+    width: 30%;
+    height: 10px;
+    background-color: green;
+    border-radius: 5px;
+
+}
+
+.div_mensagem {
+    width: 40%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -600px;
+}
+
+.div_mensagem span {
+    font-size: 30px;
+    font-family: Inter;
+}
+
+.img_dunkPAG2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 900px;
+
+}
+
+.img_dunkPAG2 img {
+    width: 650px;
+    height: 450px;
+
+}
+
+
+/* Fim Página 2 */
+
+.svg1 {
+    margin-bottom: -5px;
+}
+
+.svg2 {
+    transform: rotate(180deg);
+    margin-bottom: -10px;
+}
+
+.PagGame {
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 150px;
+    background-color: white;
+    padding-bottom: 15px;
+}
+
+.InfoGames {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.TextosGame {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.div_tituloGames span {
+    font-size: 60px;
+    font-family: Inter;
+    font-weight: 700;
+}
+
+.underlinePagGame {
+    width: 20%;
+    height: 10px;
+    background-color: green;
+    border-radius: 5px;
+}
+
+.Desc {
+    font-size: 25px;
+    font-family: Inter;
+    font-weight: 700;
+}
+
+.div_IMG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Inter;
+    font-weight: 600;
+}
+
+
+button {
+    border-radius: 25px;
+    border: none;
+    background-color: green;
+    color: white;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: 900;
+    font-family: Inter;
+    transition: transform 0.3s ease-in-out;
+    font-size: 20px ;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+img {
+    width: 300px;
+    height: 250px;
+}
+
+/* Começo da Página Novidades */
+
+.Página4 {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #F3F4F5;
+    padding-bottom: 15px;
+}
+
+.underlinePag4 {
+    width: 20%;
+    height: 10px;
+    background-color: green;
+    border-radius: 5px;
+
+}
+
+.aba_novidades {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding-top: 75px;
+    padding-bottom: 20px;
+}
+
+.div_Novidade {
+    height: 350px;
+    width: 350px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    
+}
+
+.div_Novidade:hover {
+    transform: scale(1.1);
+}
+
+.div_Novidade img {
+    height: 350px;
+    width: 350px;
+    border-radius: 15px;
+}
+
+.NovidadeTexto {
+    position: absolute;
+    top: 300px;
+    left: 35px;
+    color: white;
+    font-weight: 600;
+}
+
+/* ------ */
+
+.atualizacao {
+    font-family: Inter;
+
+}
+
+.Nome {
+    font-family: Sedgwick Ave Display;
+    font-size: 22px;
+}
+
+/* Fim da Página Novidades */
+
+/* começo do footer  */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    position: relative;
+    background-color: black;
+}
+
+.div_nome_footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+
+.div_botao_topo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+.div_redes-sociais {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-around;
+    margin-right: 50px;
+}
+
+.div_redes-sociais img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.div_redes-sociais img:hover {
+    transform: scale(1.1);
+}
+
+.div_botao_topo img {
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.div_botao_topo img:hover {
+    transform: scale(1.2);
+}
+
+footer span {
+    font-size: 25px;
+    color: white;
+    font-family: Sedgwick Ave Display;
+}

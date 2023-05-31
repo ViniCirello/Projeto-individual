@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMUNIDADE</title>
+
+    <!-- links de fontes  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+
+    <!-- imagem da página no computador -->
+    <link rel="shortcut icon" href="IMG/LOGO2.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="EDITAR.css">
+    <link rel="stylesheet" href="COMUNIDADE.css">
+    <script src="../js/funcoes.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="validarSessao(), listarInfosDeUm()" style="background-color: #161618;">
+    <!-- <body onload="validarSessao()"> -->
+
+    <div class="Left-bar">
+
+        <div class="Informacoes">
+
+            <img class="USER" src="../IMG/Verde user.png" alt="">
+
+            <span>
+                Bem vindo
+            </span>
+
+            <span id="b_usuario"></span>
+
+        </div>
+
+        <div class="Links">
+
+            <div class="div_comunidade">
+
+                <span>
+                    <a href="COMUNIDADE.html">Comunidade</a>
+                </span>
+
+                <img src="../IMG/icons8-bate-papo-96.png" alt="">
+            </div>
+
+            <div class="div_sair">
+
+                <span>
+                    <a href="../LOGIN/login.html" onclick="limparSessao()">Sair</a>
+                </span>
+
+                <img src="../IMG/SAIR.png" alt="">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="dash-right">
+
+        <div class="avisos">
+            <div class="container">
+                <h1>EDITAR UM COMENTARIO</h1>
+                <div class="div-form">
+                    <label>
+                        ID:
+                        <br>
+                        <input id="input_id" maxlength="100" type="text" style="color: rgb(196, 196, 196)" disabled>
+                    </label>
+                    <label>
+                        Autor:
+                        <br>
+                        <input id="input_nome" maxlength="100" type="text" style="color: rgb(196, 196, 196)" disabled>
+                    </label>
+                    <label>
+                        Título:
+                        <br>
+                        <input id="input_titulo" maxlength="100" type="text" style="color: rgb(196, 196, 196)" disabled>
+                    </label>
+                    <br>
+                    <div class="area">
+                        <label>
+                            Descrição (máximo de 250 caracteres):
+                            <br>
+                            <textarea id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                        </label>
+                        <br>
+                        <button onclick="editar()">EDITAR</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    function listarInfosDeUm() {
+        console.log("Criar função de trazer informações de post escolhido");
+    }
+
+    function editar() {
+        fetch(`/avisos/editar/${localStorage.getItem("ID_POSTAGEM_EDITANDO")}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                descricao: textarea_descricao.value
+            })
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                window.alert("Post alterado com sucesso pelo usuario: " + localStorage.getItem("nome") + "!");
+
+                window.location = "/COMUNIDADE/COMUNIDADE.html"
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
+</script>

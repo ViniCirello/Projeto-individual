@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO</title>
+
+    <link rel="stylesheet" href="COMUNIDADE.css">
+
+    <!-- links de fontes  -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+
+    <!-- imagem da página no computador -->
+    <link rel="shortcut icon" href="IMG/LOGO2.png" type="image/x-icon">
+
+</head>
+
+<!-- <body onload="validarSessao()"> -->
+
+<body onload="atualizarFeed()" style="background-color: #161618;">
+
+    <div class="Left-bar">
+
+        <div class="Informacoes">
+
+            <img class="USER" src="../IMG/Verde user.png" alt="">
+
+            <span>
+                Bem vindo
+            </span>
+
+            <span id="b_usuario"></span>
+
+        </div>
+
+        <div class="Links">
+
+            <div class="div_comunidade">
+
+                <span>
+                    <a href="">Comunidade</a>
+                </span>
+
+                <img src="../IMG/icons8-bate-papo-96.png" alt="">
+            </div>
+
+            <div class="div_sair">
+
+                <span>
+                    <a href="../LOGIN/login.html" onclick="limparSessao()">Sair</a>
+                </span>
+
+                <img src="../IMG/SAIR.png" alt="">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="Tela-Principal">
+        
+        <div class="div_titulo">
+
+            <span class="COMUNIDADE">
+                COMUNIDADE
+            </span>
+
+            <div class="Underline"></div>
+
+        </div>
+        <div class="dash-right">
+
+            <div class="avisos">
+                <div class="container">
+                    <h1>Publicar um comentário</h1>
+                    <div class="div-form">
+                        <form id="form_postagem" method="post" onsubmit="return publicar()">
+                            <label>
+                                Título:
+                                <br>
+                                <input name="titulo" id="titulo" maxlength="100" type="text">
+                            </label>
+                            <br>
+                            <label>
+                                Descrição (máximo de 250 caracteres):
+                                <br>
+                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                            </label>
+                            <br>
+                            <button class="botaoPostar">Enviar</button>
+                        </form>
+                    </div>
+                    <h1>Mural de comentários</h1>
+                    <div class="div-results">
+                        <div id="feed_container" class="feed-container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="COMUNIDADE.js"></script>
+
+</body>
+
+</html>

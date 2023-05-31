@@ -1,7 +1,9 @@
 
 var tenis = [
     `https://images.stockx.com/360/adidas-Yeezy-Boost-350-V2-Zebra/Images/adidas-Yeezy-Boost-350-V2-Zebra/Lv2/img01.jpg?fm=avif&amp;auto=compress&amp;w=480&amp;dpr=2&amp;updated_at=1635342807&amp;h=320&amp;q=60 2x`,
+
     `https://images.stockx.com/360/Air-Jordan-1-Retro-High-OG-Yellow-Toe/Images/Air-Jordan-1-Retro-High-OG-Yellow-Toe/Lv2/img01.jpg?fm=avif&amp;auto=compress&amp;w=480&amp;dpr=2&amp;updated_at=1659075277&amp;h=320&amp;q=60 2x`,
+
     `https://images.stockx.com/360/Nike-Dunk-Low-Court-Purple/Images/Nike-Dunk-Low-Court-Purple/Lv2/img01.jpg?fm=avif&amp;auto=compress&amp;w=480&amp;dpr=2&amp;updated_at=1648145946&amp;h=320&amp;q=60 2x
    `,
     `https://images.stockx.com/360/New-Balance-550-White-Black-Rain-Cloud-GS/Images/New-Balance-550-White-Black-Rain-Cloud-GS/Lv2/img01.jpg?fm=avif&amp;auto=compress&amp;w=480&amp;dpr=2&amp;updated_at=1674030282&amp;h=320&amp;q=60 2x
@@ -23,6 +25,21 @@ var tenis = [
 
 ]
 
+var nomeTenis = [
+    'yeezy 350',
+    'Air Jordan 1',
+    'Nike Dunk',
+    'New balance 550',
+    'Air Jordan 4',
+    'Yeezy 700',
+    'Yeezy Slide',
+    'Yeezy Foam Runner',
+    'Air Jordan 11',
+    'Air Jordan 3',
+    'Converse',
+    'Nike blazer'
+]
+
 function GERAR() {
 
     var NumeroAleatorio;
@@ -31,8 +48,10 @@ function GERAR() {
 
     console.log(NumeroAleatorio)
 
-    div_IMG.innerHTML = `<img src="${tenis[NumeroAleatorio]}" alt=""></img>`
-
+    div_IMG.innerHTML = `<img src="${tenis[NumeroAleatorio]}" alt=""></img> <br>
+    ${nomeTenis[NumeroAleatorio]}
+    `
+    
 }
 
 

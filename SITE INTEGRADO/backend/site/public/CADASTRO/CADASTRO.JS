@@ -33,6 +33,7 @@ function CADASTRAR() {
             })
         })
         .then(() => {
+            alert('Cadastro realizado com sucesso!')
             window.location.href = '/login/login.html'
         }) 
     }

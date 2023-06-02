@@ -1,40 +1,61 @@
 // Gráfico da Nike
 const ctx = document.getElementById('myChart');
 
-new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Tênis'],
-        datasets: [{
-            label: 'Nike SB Dunk High',
-            data: [68],
-            borderWidth: 1
+
+var dadosGraficoNike = []
+var labelsGraficoNike = []
+
+var dadosGraficoAdidas = []
+var labelsGraficoAdidas = []
+
+var dadosGraficosNewBalance = []
+var labelsGraficoNewBalance = []
+
+var chartNike = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labelsGraficoNike,
+            datasets: [{
+            data: dadosGraficoNike[0], 
+            borderWidth: 1,
+            backgroundColor: [
+                'rgba(13, 200, 66, 0.532)',
+           
+              ],
+              borderColor: [
+                'rgb(6, 148, 46)',
+               
+              ],
         },
-        {
-            label: 'VaporMax',
-            data: [37],
-            borderWidth: 1
-        }, {
+        // {
+        //     label: 'VaporMax',
+        //     data: dadosGraficoNike[1],
+        //     borderWidth: 1
+        // }, {
 
 
-            label: 'Air Jordan 2',
-            data: [60],
-            borderWidth: 1
+        //     label: 'Air Jordan 2',
+        //     data: dadosGraficoNike[2],
+        //     borderWidth: 1
 
-        }, {
+        // }, {
 
-            
-            label: 'Ja 1',
-            data: [20],
-            borderWidth: 1
-        }
-        
+
+        //     label: 'Ja 1',
+        //     data: dadosGraficoNike[3],
+        //     borderWidth: 1
+        // }
+
 
         ]
     },
     options: {
+        plugins:{legend:{display:false}},
         scales: {
             y: {
+                ticks:{
+                    stepSize: 1
+                },
                 beginAtZero: true
             }
         }
@@ -45,86 +66,180 @@ new Chart(ctx, {
 // Gráfico da Adidas
 const ctx2 = document.getElementById('myChart_adidas');
 
-new Chart(ctx2, {
+var chartAdidas = new Chart(ctx2, {
     type: 'bar',
     data: {
-        labels: ['Tênis'],
-        datasets: [{
-            label: 'Adidas Top 10 ',
-            data: [83],
-            borderWidth: 1
-        },
-        {
-            label: 'Adidas NMD S1',
-            data: [60],
-            borderWidth: 1
-        }, {
-
-
-            label: 'Adidas CENTENNIAL',
-            data: [45],
-            borderWidth: 1
-
-        }, {
-
-            
-            label: 'Adidas ORKETRO',
-            data: [12],
-            borderWidth: 1
+        labels: labelsGraficoAdidas,
+            datasets: [{
+            data: dadosGraficoAdidas[0], 
+            borderWidth: 1,
+            backgroundColor: [
+                'rgba(13, 200, 66, 0.532)',
+           
+              ],
+              borderColor: [
+                'rgb(6, 148, 46)',
+               
+              ],
         }
-        
+
 
         ]
     },
     options: {
+    plugins:{legend:{display:false}},
         scales: {
             y: {
+                ticks:{
+                    stepSize: 1
+                },
                 beginAtZero: true
             }
         }
     }
-});
+}
+);
 
 
 // Gráfico da newbalance
 const ctx3 = document.getElementById('myChart_NewBalance');
 
-new Chart(ctx3, {
+var chartNewBalance = new Chart(ctx3, {
     type: 'bar',
     data: {
-        labels: ['Tênis'],
-        datasets: [{
-            label: 'New Balance 9060',
-            data: [31],
-            borderWidth: 1
-        },
-        {
-            label: 'New Balance Warped',
-            data: [12],
-            borderWidth: 1
-        }, {
-
-
-            label: 'New Balance 550',
-            data: [78],
-            borderWidth: 1
-
-        }, {
-
-            
-            label: 'New Balance - 5740',
-            data: [34],
-            borderWidth: 1
+        labels: labelsGraficoNewBalance,
+            datasets: [{
+            data: dadosGraficosNewBalance[0], 
+            borderWidth: 1,
+            backgroundColor: [
+                'rgba(13, 200, 66, 0.532)',
+           
+              ],
+              borderColor: [
+                'rgb(6, 148, 46)',
+               
+              ],
         }
-        
 
         ]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
+        plugins:{legend:{display:false}},
+            scales: {
+                y: {
+                    ticks:{
+                        stepSize: 1
+                    },
+                    beginAtZero: true
+                }
             }
         }
     }
-});
+    );
+
+window.load = listarNike()
+function listarNike() {
+    fetch(`/chart/listar/Nike`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(resposta => {
+            console.log(resposta.status)
+            if (resposta.status == 200) {
+                resposta.json().then(usuario => {
+
+                    for( var i = 0; i < usuario.length ; i++) {
+                        dadosGraficoNike.push(usuario[i].contagem)
+                        labelsGraficoNike.push(usuario[i].nome)
+                    }
+                    chartNike.data.datasets[0].data = dadosGraficoNike 
+                    chartNike.update(),
+                    console.log(usuario)
+
+                    // for( var i = 0; i < usuario.length ; i++) {
+                    //     dadosGraficoAdidas.push(usuario[i].contagem)
+                    //     labelsGraficoAdidas.push(usuario[i].nome)
+                    // }
+                    // chartAdidas.data.datasets[0].data = dadosGraficoAdidas 
+                    // chartAdidas.update(),
+                    // console.log(usuario)
+
+                    // for( var i = 0; i < usuario.length ; i++) {
+                    //     dadosGraficosNewBalance.push(usuario[i].contagem)
+                    //     labelsGraficoNewBalance.push(usuario[i].nome)
+                    // }
+                    // chartNewBalance.data.datasets[0].data = dadosGraficosNewBalance 
+                    // chartNewBalance.update(),
+                    // console.log(usuario)
+
+
+                })
+                
+            }
+        })
+}
+
+window.load = listarAdidas()
+function listarAdidas() {
+    fetch(`/chart/listar/Adidas`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(resposta => {
+            console.log(resposta.status)
+            if (resposta.status == 200) {
+                resposta.json().then(usuario => {
+
+
+                    for( var i = 0; i < usuario.length ; i++) {
+                        dadosGraficoAdidas.push(usuario[i].contagem)
+                        labelsGraficoAdidas.push(usuario[i].nome)
+                    }
+                    chartAdidas.data.datasets[0].data = dadosGraficoAdidas 
+                    chartAdidas.update(),
+                    console.log(usuario)
+
+
+                })
+                
+            }
+        })
+}
+window.load = listarNewBalance()
+function listarNewBalance() {
+    fetch(`/chart/listar/New Balance`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(resposta => {
+            console.log(resposta.status)
+            if (resposta.status == 200) {
+                resposta.json().then(usuario => {
+
+                    
+                    for( var i = 0; i < usuario.length ; i++) {
+                        dadosGraficosNewBalance.push(usuario[i].contagem)
+                        labelsGraficoNewBalance.push(usuario[i].nome)
+                    }
+                    chartNewBalance.data.datasets[0].data = dadosGraficosNewBalance 
+                    chartNewBalance.update(),
+                    console.log(usuario)
+
+
+                })
+                
+            }
+        })
+}
+
+function Inserir(idTenis) {
+    fetch(`/chart/publicar/${idTenis}`,{
+        method: "POST"
+    }).catch(e => console.log(e))
+}

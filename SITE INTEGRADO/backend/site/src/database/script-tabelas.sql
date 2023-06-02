@@ -4,21 +4,17 @@ USE SNKRS;
 Create table Usuario ( 
 idUsuario int primary key auto_increment, 
 nome varchar(45) ,
-email varchar(45),
+email varchar(45) unique,
 senha varchar (45)
 );
 
 Create table Tenis (
 idTenis int primary key auto_increment,
 marca varchar(45),
-nome varchar(45));
+nome varchar(45),
+visitas int
+);
 
-Create table Visitas ( 
-fkTenis int,
-fkUsuario int,
-foreign key (fkTenis) references Tenis(idTenis),
-foreign key (fkUsuario) references Usuario(idUsuario),
-primary key auto_increment (fkTenis,fkUsuario));
 
 Create table Endereco (
 idEndereco int primary key auto_increment, 
@@ -34,4 +30,12 @@ CREATE TABLE aviso (
 	descricao VARCHAR(150),
 	fkUsuario INT,
 	FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario)
+);
+
+CREATE TABLE faleConosco (
+	idFale INT PRIMARY KEY AUTO_INCREMENT,
+	email VARCHAR(45),
+    nome varchar(45),
+    assunto varchar(50),
+	descricao VARCHAR(250)
 );

@@ -1,4 +1,8 @@
-    body {
+html {
+    scroll-behavior: smooth;
+}
+ 
+ body {
         margin: 0;
         background-image: url(../IMG/Fundo3.png);
         background-size: cover;

@@ -4,9 +4,6 @@
   <p> 
     Nós da SNKRS somos um grupo de sneackers-head, formado em 2023 com a intenção de te ajudar a entender mais sobre o mercado dos tênis! Te atualizando sobre             tendencias, assuntos do momento e também te ajudando a se integrar nesse mercado!
   </p>
-  
-  - <a href="" target="_blank"><p>Visite o site clicando aqui</p></a>
-</div>
 
 <br><br>
 
